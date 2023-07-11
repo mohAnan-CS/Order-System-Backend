@@ -6,6 +6,7 @@ import com.example.ordersystem.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +22,11 @@ public class CustomerController {
     @GetMapping("")
     public ResponseEntity<List<Customer>> getAllCustomers() {
         return ResponseEntity.ok().body(customerServices.getAllCustomers());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CustomerDTO> getCustomerById(@PathVariable(name = "id") long id) {
+        return ResponseEntity.ok(customerServices.getCustomer(id));
     }
 
 }

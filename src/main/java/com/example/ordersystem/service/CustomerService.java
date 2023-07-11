@@ -1,6 +1,7 @@
 package com.example.ordersystem.service;
 
 import com.example.ordersystem.dto.CustomerDTO;
+import com.example.ordersystem.exception.ResourceNotFoundException;
 import com.example.ordersystem.model.Customer;
 import com.example.ordersystem.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,13 @@ public class CustomerService {
 
     }
 
+    public CustomerDTO getCustomer(long id){
+
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("customer", "id", id));
+        return mapToDTO(customer);
+
+    }
+
     private Customer mapToEntity(CustomerDTO customerDTO ){
 
         Customer customer = new Customer();
@@ -41,5 +49,16 @@ public class CustomerService {
 
     }
 
+    private CustomerDTO mapToDTO(Customer customer){
+
+        CustomerDTO customerDTO = new CustomerDTO();
+        customerDTO.setFirstName(customer.getFirst_name());
+        customerDTO.setLastName(customer.getLast_name());
+        customerDTO.setDate(customer.getBornAt());
+        customerDTO.setEmail(customer.getEmail());
+        customerDTO.setPassword(customer.getPassword());
+        return customerDTO;
+
+    }
 
 }

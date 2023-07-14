@@ -1,4 +1,4 @@
-package com.example.ordersystem.security;
+package com.birzeit.ordersystem.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

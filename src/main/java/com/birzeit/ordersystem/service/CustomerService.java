@@ -1,15 +1,14 @@
-package com.example.ordersystem.service;
+package com.birzeit.ordersystem.service;
 
-import com.example.ordersystem.dto.CustomerDTO;
-import com.example.ordersystem.exception.ResourceNotFoundException;
-import com.example.ordersystem.model.Customer;
-import com.example.ordersystem.repository.CustomerRepository;
+import com.birzeit.ordersystem.exception.ResourceNotFoundException;
+import com.birzeit.ordersystem.model.Customer;
+import com.birzeit.ordersystem.repository.CustomerRepository;
+import com.birzeit.ordersystem.dto.CustomerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service

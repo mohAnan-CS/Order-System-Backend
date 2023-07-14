@@ -1,8 +1,8 @@
-package com.example.ordersystem.controller;
+package com.birzeit.ordersystem.controller;
 
-import com.example.ordersystem.dto.CustomerDTO;
-import com.example.ordersystem.model.Customer;
-import com.example.ordersystem.service.CustomerService;
+import com.birzeit.ordersystem.model.Customer;
+import com.birzeit.ordersystem.dto.CustomerDTO;
+import com.birzeit.ordersystem.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

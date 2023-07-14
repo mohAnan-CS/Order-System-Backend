@@ -1,4 +1,4 @@
-package com.example.ordersystem.dto;
+package com.birzeit.ordersystem.dto;
 
 import java.util.Date;
 import lombok.*;

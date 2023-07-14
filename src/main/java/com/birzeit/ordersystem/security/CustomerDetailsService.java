@@ -1,6 +1,6 @@
-package com.example.ordersystem.security;
+package com.birzeit.ordersystem.security;
 
-import com.example.ordersystem.repository.CustomerRepository;
+import com.birzeit.ordersystem.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

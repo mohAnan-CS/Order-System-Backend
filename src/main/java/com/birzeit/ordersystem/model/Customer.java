@@ -1,4 +1,4 @@
-package com.example.ordersystem.model;
+package com.birzeit.ordersystem.model;
 
 //import com.fasterxml.jackson.annotation.JsonFormat;
 //import jakarta.persistence.*;

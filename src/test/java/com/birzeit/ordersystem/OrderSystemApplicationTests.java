@@ -1,4 +1,4 @@
-package com.example.ordersystem;
+package com.birzeit.ordersystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
